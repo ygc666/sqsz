@@ -1,0 +1,510 @@
+@import 'resetting.css';
+
+//公共的
+.main{
+    margin: auto;
+}
+body{
+    font-family: "微软雅黑";
+    background-color:  #fff;
+    font-size: 14px;
+    color: #000;
+    position: relative;
+}
+section{
+    position: absolute;
+    background-color: #fff;
+}
+header{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    .main{
+        width: 1200px;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            padding: 15px 50px;
+            div{
+                width: 98px;
+                height: 48px;
+                border: 1px solid #000;
+                text-align: center;
+                span{
+                    font-size: 18px;
+                    color: #000;
+                    line-height: 50px;
+                }
+            }
+        }
+        .menu{
+            width: 380px;
+            li{
+                a{
+                    color: #000;
+                }
+                float: left;
+                margin-right: 58px;
+                &:last-child{
+                    margin-right: 0;
+                }
+                a:hover{
+                    padding-bottom: 4px;
+                    border-bottom: #000 1px solid;
+                }
+                .active{
+                    padding-bottom: 4px;
+                    border-bottom: #000 1px solid;
+                }
+            }
+        }
+    }
+}
+#main{
+    position: relative;
+    margin-top: 80px;
+    .s1{
+        left: 0;
+        width: 100%;
+        //min-height: 500px;
+        background-color: #ff6666;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 1200px;
+    }
+    .s2{
+        //display: none !important;
+        width: 100%;
+        min-width: 1200px;
+        //min-height: 500px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left{
+            width: 50%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            div{
+                border: 1px solid #000;
+            }
+        }
+        .right{
+            width: 50%;
+            height: 100%;
+            background-color: #ccccff;
+            display: flex;
+            justify-content: center;
+            flex-wrap:wrap;//换行
+            .d1{
+                position: relative;
+                margin-top: 80px;
+                width: 440px;
+                height: 190px;
+                h1{
+                    font-weight: 400;
+                    font-size: 56px;
+                    span{
+                        font-size: 32px;
+                    }
+                }
+                .one{
+                    margin-top: 20px;
+                    font-size: 32px;
+                }
+                .two{
+                    margin-top: 20px;
+                    font-size: 22px;
+                }
+                i{
+                    position: absolute;
+                    width: 62px;
+                    height: 62px;
+                    top: 0;
+                    right: 0;
+                    background: url(../img/2/sun.png) no-repeat;
+                }
+            }
+            .d2{
+                position: relative;
+                width: 440px;
+                height: 128px;
+                img{
+                    display: inline-block;
+                    margin-left: -9px;
+                }
+                span{
+                    font-size: 16px;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    padding-bottom: 6px;
+                    border-bottom: 2px solid #000;
+                }
+            }
+        }
+    }
+    .s4{
+        //display: none !important;
+        width: 100%;
+        min-width: 1200px;
+        //min-height: 500px;
+        display: flex;
+        color: #fff;
+        .left{
+            width: 50%;
+            height: 100%;
+            .title{
+                padding-left: 20px;
+                font-weight: 200;
+                letter-spacing: 4px;
+                font-size: 28px;
+                line-height: 60px;
+                background-color: #336699;
+            }
+            ul{
+                position: relative;
+                padding: 18px;
+                background-color: #2aa7cd;
+                li{
+                    position: relative;
+                    padding: 8px 0;
+                    font-size: 18px;
+                    width: 100%;
+                    height: 34px;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    span{
+                        display: inline-block;
+                        width: 100px;
+                        height: 34px;
+                        background-color: #336699;
+                        text-align: center;
+                        line-height: 34px;
+                    }
+                    p{
+                        text-indent: 2em;
+                    }
+                    &:after{
+                        display: inline-block;
+                        width: 34px;
+                        height: 34px;
+                        content: "";
+                        position: absolute;
+                        background: url(../img/3/zk1.png) no-repeat;
+                        background-size: 34px 34px;
+                        top: 8px;
+                        right: 0;
+                    }
+                    &:hover{
+                        span{
+                            background-color: #ff6666;
+                        }
+                        &:after{
+                            display: inline-block;
+                            width: 34px;
+                            height: 34px;
+                            position: absolute;
+                            background: url(../img/3/zk2.png) no-repeat;
+                            background-size: 34px 34px;
+                            top: 8px;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .right{
+            position: relative;
+            width: 50%;
+            height: 100%;
+            background-size: 28px 28px;
+            .borderBox{
+                position: absolute;
+                left: calc(~"50% - 130px");
+                width: 260px;
+                height: 260px;
+                border: 1px dashed #000;
+                &::after{
+                    content: "";
+                    display: block;
+                    transform: rotate(45deg);
+                    position: absolute;
+                    left: calc(~"50% - 64px");
+                    top: calc(~"50% - 64px");
+                    width: 128px;
+                    height: 128px;
+                    background: url(../img/X.png) no-repeat center center;
+                }
+            }
+            .main{
+                position: absolute;
+                left: calc(~"50% - 140px");
+                width: 280px;
+                height: 280px;
+                background: url(../img/3/fc.png) no-repeat center 30px #ffcccc;
+                //opacity: .5;
+                background-size: 150px 150px;
+                text-align: center;
+                &::after{
+                    content: "你悄悄的从我的身边走过c";
+                    color: #000;
+                    display: block;
+                    height: 32px;
+                    margin-top: 200px;
+                    background: url(../img/3/bl.png) no-repeat center 24px;
+                    background-size: 170px 3px;
+                }
+                cursor: move;
+            }
+            .btn{
+                //animate.css执行次数
+                //animation-iteration-count: 2;
+            width: 280px;
+            height: 64px;
+            border: 2px solid #000;
+            position: absolute;
+            bottom: 100px;
+            left: calc(~"50% - 140px");
+            cursor: pointer;
+            &>*{
+                position: absolute;
+            }
+            .top{
+                width:284px;
+                height: 2px;
+                left: -2px;
+                top: -2px;
+                div{
+                        width: 0px;
+                        height: 2px;
+                        background: #ff8c94;
+                        margin: 0 auto;
+                        transition: .4s;
+                }
+            }
+            .left,.right{
+                    width: 2px;
+                    height: 0;
+                    background: #ff8c94;
+                    top: 0px;
+                    transition: .4s;
+            }
+            .left{
+                left: -2px;
+            }
+            .right{
+                right: -2px;
+            }
+            .bottom{
+                    width: 284px;
+                    height: 2px;
+                    left: -2px;
+                    bottom: -2px;
+                    div{
+                        position: absolute;
+                        width: 0;
+                        height: 2px;
+                        background: #ff8c94;
+                        transition: .4s;
+                    }
+            }
+            .bottom div:nth-child(1){
+                left: 0;
+                }
+                .bottom div:nth-child(2){
+                    right: 0;
+                }
+                &:hover .left,&:hover .right{
+                    height: 64px;
+                }
+                &:hover .top>div{
+                    width: 284px;
+                }
+                &:hover .bottom>div{
+                    width: 142px;
+                }
+                &:hover .textBox{
+                    transition: .4s;
+                    color: #fff;
+                    background: #ff8c94;
+                }
+                .textBox{
+                    background: #dcedc2;
+                    left: 3px;
+                    top:3px;
+                    color: #000;
+                }
+                .textBox div{
+                    width: 274px;
+                    height: 58px;
+                    text-align: center;
+                    font-size: 14px;
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                    line-height: 60px;
+                }
+            }
+        }
+    }
+    .s5{
+        //display: none !important;
+        width: 100%;
+        min-width: 1200px;
+        //min-height: 500px;
+        display: flex;
+        color: #fff;
+        .left{
+            &:hover{
+                .zhezhao{
+                    opacity: 0;
+                }
+            }
+            width: 50%;
+            height: 100%;
+            background: url(../img/4/big.jpg) no-repeat top left;
+            background-size: 100% 100%;
+            .zhezhao{
+                width: 100%;
+                height: 100%;
+                background-color: #66cccc;
+                opacity: 0.6;
+                transition: .5s;
+            }
+        }
+        .right{
+            position: relative;
+            button.zk{
+                position: absolute;
+                width: 22px;
+                height: 22px;
+                background: url(../img/zk4.png) no-repeat;
+                background-size: 22px 22px; 
+                right: 20px;
+                top: 20px;
+                cursor: pointer;
+            }
+            button.ss{
+                position: absolute;
+                width: 22px;
+                height: 22px;
+                background: url(../img/ss.png) no-repeat;
+                background-size: 22px 22px; 
+                right: 20px;
+                top: 20px;
+                cursor: pointer;
+            }
+            color: #fff;
+            width: 50%;
+            height: 100%;
+            background-color: #66cccc;
+            padding: 20px;
+            box-sizing: border-box;
+            h3{
+                font-weight: 400;
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+            &>span{
+                display: block;
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            p{
+                width: 100%;
+                font-size: 16px;
+                letter-spacing: 2px;
+                line-height: 24px;
+                overflow: hidden;
+            }
+        }
+    }
+    .s6{
+        //display: none !important;
+        width: 100%;
+        min-width: 1200px;
+        //min-height: 500px;
+        display: flex;
+        color: #fff;
+        background-color: #c0e1e7;
+        .xuehua{
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background: url('../img/5/snow1.png'),url('../img/5/snow2.png');
+            animation: 6s linear infinite;
+            pointer-events: none;
+            left: 0;
+            top: 0;
+            @keyframes snow{
+                0% {
+                    background-position: 0 0, 0 0;
+                }
+                100% {
+                    background-position: 500px 500px, 1000px 500px;
+                }
+            }
+            @keyframes snow2{//逆转
+                0% {
+                    background-position: 500px 500px, 1000px 500px;
+                }
+                100% {
+                    background-position: 0 0, 0 0;
+                }
+            }
+            @keyframes snow1{//right
+                0% {
+                    background-position: 0 0, 0 0;
+                }
+                100% {
+                    background-position: -500px 500px, -1000px 500px;
+                }
+            }
+            @keyframes snow3{//right
+                0% {
+                    background-position: -500px 500px, -1000px 500px;
+                }
+                100% {
+                    background-position: 0 0, 0 0;
+                }
+            }
+        }
+        .main{
+            position: relative;
+            width: 894px;
+            height: 100%;
+            text-align: center;
+            div{
+                position: absolute;
+                width: 94px;
+                height: 94px;
+                background: url(../img/5/fj.png) no-repeat;
+                right: 50px;
+                top: 80px;
+                cursor: pointer;
+                transition: 1s;
+            }
+            img{
+                display: inline-block;
+                &:nth-of-type(1){
+                    margin: 120px 0 160px 0;
+                }
+                &:nth-of-type(2){
+                    margin-bottom: 60px;
+                }
+            }
+        }
+    }
+}

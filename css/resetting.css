@@ -1,0 +1,35 @@
+body,div,h1,h2,h3,h4,h5,h6,p,ul,li{
+	margin: 0;
+	padding: 0;
+}
+a, a:hover, a:visited, a:link, a:active {
+    color:#000;
+    text-decoration:none;
+    outline: none;
+    /* a标签的四种状态都和本身颜色保持一致*/
+}
+button{
+    border:0;
+    background-color:none;
+    outline:none;
+    -webkit-appearance: none;/*用于IOS下移除原生样式*/
+}
+
+input{
+    border: none;
+    appearance:none;
+    -moz-appearance:none;
+    outline:none;/*input标签聚焦不出现默认边框:*/
+    -webkit-appearance: none;/*用于IOS下移除原生样式*/
+}
+/*or:
+input:focus{ outline:none; }//input标签聚焦不出现默认边框:*/
+img{
+	display: block;
+	border:none;
+	vertical-align: top;
+	max-width: 100%;
+}
+ol, ul {  
+  list-style: none;  
+}
